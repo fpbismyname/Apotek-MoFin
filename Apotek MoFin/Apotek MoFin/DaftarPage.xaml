@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Apotek_MoFin.DaftarPage"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <Frame HorizontalOptions="CenterAndExpand" 
+               VerticalOptions="Center" 
+               Background="blue" 
+               CornerRadius="20">
+            <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="Center">
+                <Label Text="Apotek Mofin"
+                       FontAttributes="Bold"
+                       Margin="20"
+                       HorizontalTextAlignment="Center"
+                       FontSize="24"/>
+                <Entry Placeholder="Username"
+                       PlaceholderColor="gray"
+                       x:Name="username_daftar"/>
+                <Entry Placeholder="Password"
+                       PlaceholderColor="gray"
+                       x:Name="password_daftar"/>
+                <Entry Placeholder="Ulangi Password"
+                       PlaceholderColor="gray"
+                       x:Name="confirm_password_daftar"/>
+                <Button Text="Daftar"
+                        CornerRadius="10"
+                        Background="cyan"
+                        Clicked="daftar_clicked"
+                        x:Name="btn_daftar"
+                        Margin="20"/>   
+                <Label HorizontalTextAlignment="Center">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Sudah punya akun ? "/>
+                            <Span Text="Login disini"
+                          TextColor="cyan"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="login_tapped">
+                        </TapGestureRecognizer>
+                    </Label.GestureRecognizers>
+                </Label>
+            </StackLayout>
+        </Frame>
+    </ContentPage.Content>
+</ContentPage>

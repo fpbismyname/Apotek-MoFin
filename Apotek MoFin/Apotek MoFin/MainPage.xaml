@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Apotek_MoFin.MainPage"
+             NavigationPage.HasNavigationBar="False">
+
+    <Frame HorizontalOptions="CenterAndExpand" 
+               VerticalOptions="Center" 
+               Background="Blue" 
+               CornerRadius="20">
+        <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="Center">
+            <Label Text="Apotek Mofin"
+                   FontAttributes="Bold"
+                   Margin="20"
+                   HorizontalTextAlignment="Center"
+                   FontSize="24"/>
+            <Entry Placeholder="Username"
+                   PlaceholderColor="gray"
+                   x:Name="username_login"/>
+            <Entry Placeholder="Password"
+                   PlaceholderColor="gray"
+                   x:Name="password_login"/>
+            <Button Text="Login"
+                    CornerRadius="10"
+                    Clicked="login_clicked"
+                    Background="cyan"
+                    Margin="20"/>
+            <Label HorizontalTextAlignment="Center">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Belum punya akun ? "/>
+                        <Span Text="Daftar disini"
+                          TextColor="Cyan"/>
+                    </FormattedString>
+                </Label.FormattedText>
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="daftar_tapped">
+                    </TapGestureRecognizer>
+                </Label.GestureRecognizers>
+            </Label>
+        </StackLayout>
+    </Frame>
+
+</ContentPage>
